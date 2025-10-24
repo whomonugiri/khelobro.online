@@ -1,0 +1,18 @@
+{
+  "short_name": "Money Ludo",
+  "name": "Money Ludo",
+  "icons": [
+    {
+      "src": "assets/applogo.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "id": "/?source=pwa",
+  "start_url": ".",
+  "description": "Install Money Ludo App On Your Smartphone",
+  "background_color": "#201876",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#201876"
+}

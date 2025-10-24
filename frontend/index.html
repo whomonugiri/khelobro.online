@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/assets/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Money Ludo</title>
+  <link rel="manifest" href="/manifest.json" />
+  
+
+  <style>
+    /* HTML: <div class="loader"></div> */
+/* HTML: <div class="loader"></div> */
+
+body{
+  margin: 0;
+ 
+}
+/* HTML: <div class="loader"></div> */
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 50px;
+  --b: 8px; 
+  aspect-ratio: 1;
+  border-radius: 50%;
+  padding: 1px;
+  background: conic-gradient(#0000 10%,#83021a) content-box;
+  -webkit-mask:
+    repeating-conic-gradient(#0000 0deg,#000 1deg 20deg,#0000 21deg 36deg),
+    radial-gradient(farthest-side,#0000 calc(100% - var(--b) - 1px),#000 calc(100% - var(--b)));
+  -webkit-mask-composite: destination-in;
+          mask-composite: intersect;
+  animation:l4 1s infinite steps(10);
+}
+@keyframes l4 {to{transform: rotate(1turn)}}
+
+
+.load{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-color: #e5e5f7;
+opacity: 0.8;
+/* background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #e5e5f7 10px ), repeating-linear-gradient( #9f131a62, #271f7f4d ); */
+}
+
+.lt{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: bold;
+  font-size: large;
+  margin-top: 5px;;
+}
+
+ /* #root{
+  transform: rotate(180deg);
+
+} */
+  </style>
+
+  <style media='screen' type='text/css'>
+      @font-face {
+        font-family: font1;
+        src: url('/assets/digital-7.ttf');
+        font-weight:400;
+        font-weight:normal;
+      }
+</style>
+  </head>
+
+  <body>
+  <div style="font-family:font1; position:absolute; left:-1000px; visibility:hidden;">.</div>
+
+
+    <div id="root"><div class="load">
+      <div>
+        <img src="/assets/logo.png" alt="logo" width="150px" />
+      </div>
+      <div class="loader"></div><div>
+      
+    </div></div>
+    
+    <script type="module" src="/src/main.jsx"></script>
+    
+  </body>
+</html>
