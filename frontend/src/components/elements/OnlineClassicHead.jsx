@@ -11,7 +11,7 @@ export const OnlineClassicHead = (props) => {
       {" "}
       <div className="mt-3 border-bottom">
         <div className="d-flex justify-content-between mb-2 align-items-center">
-          <div className="fw-bold  fs-5 mb-2 ">Classic 1 Token Win</div>
+          <div className="fw-bold  fs-5 mb-2 ">Classic Online</div>
           <div className="">
             {/* //user */}
             <button

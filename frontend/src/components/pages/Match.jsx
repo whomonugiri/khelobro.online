@@ -226,33 +226,34 @@ export const Match = () => {
                   </div>
                 </CopyToClipboard>
 
-                <div className="d-flex align-items-center">
-                  <a
-                    href={`https://lk.gggred.com/?rmc=${match.roomCode}&gt=0`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn btn-primary w-100 text-center fw-bold"
-                  >
-                    <img
-                      src={`assets/ludoking.png`}
-                      height="25px"
-                      width="25px"
-                      className=" rounded"
-                    />{" "}
-                    JOIN ROOM ON LUDO KING{" "}
-                    <img
-                      src={`assets/ludoking.png`}
-                      height="25px"
-                      width="25px"
-                      className=" rounded"
-                    />
-                  </a>
-                </div>
-
                 {match[userType].result == null && (
-                  <div className="d-flex justify-content-between gap-2 my-3">
-                    <IWon match={match} />
-                    <ILost match={match} />
+                  <div>
+                    <div className="d-flex align-items-center my-2">
+                      <a
+                        href={`https://lk.gggred.com/?rmc=${match.roomCode}&gt=0`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn btn-primary w-100 text-center fw-bold"
+                      >
+                        <img
+                          src={`assets/ludoking.png`}
+                          height="25px"
+                          width="25px"
+                          className=" rounded"
+                        />{" "}
+                        JOIN ROOM ON LUDO KING{" "}
+                        <img
+                          src={`assets/ludoking.png`}
+                          height="25px"
+                          width="25px"
+                          className=" rounded"
+                        />
+                      </a>
+                    </div>
+                    <div className="d-flex justify-content-between gap-2 my-3">
+                      <IWon match={match} />
+                      <ILost match={match} />
+                    </div>
                   </div>
                 )}
               </div>

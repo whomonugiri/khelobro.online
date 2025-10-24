@@ -1595,14 +1595,15 @@ export const joinMatch = async (req, res) => {
     const joiner = await User.findOne({ _id: req.body.joinerId });
 
     const runningmatch = await ManualMatch.findOne({
-      $and: [
-        { status: "running" }, // Exclude the current matchId
+      status: "running",
+      $or: [
         {
-          $or: [
-            { "host.userId": joiner._id }, // Condition 1: Host userId matches
-            { "joiner.userId": joiner._id },
-            // Condition 2: Joiner userId matches
-          ],
+          "host.userId": joiner._id,
+          "host.result": { $in: ["win", "loss"] },
+        },
+        {
+          "joiner.userId": joiner._id,
+          "joiner.result": { $in: ["win", "loss"] },
         },
       ],
     }).sort({ createdAt: -1 });
@@ -1633,7 +1634,20 @@ export const joinMatch = async (req, res) => {
       ],
     }).sort({ createdAt: -1 });
 
-    if (runningmatch || runningmatch2 || runningmatch3) {
+    const runningmatch4 = await QuickLudo.findOne({
+      $and: [
+        { status: "running" }, // Exclude the current matchId
+        {
+          $or: [
+            { "blue.userId": joiner._id }, // Condition 1: Host userId matches
+            { "green.userId": joiner._id },
+            // Condition 2: Joiner userId matches
+          ],
+        },
+      ],
+    }).sort({ createdAt: -1 });
+
+    if (runningmatch || runningmatch2 || runningmatch3 || runningmatch4) {
       return res.json({
         success: false,
         message: "already_in_matchj",
@@ -3936,14 +3950,15 @@ export const playClassicOnline = async (req, res) => {
 
 export const isAnyMatchRunning = async (req) => {
   const runningmatch = await ManualMatch.findOne({
-    $and: [
-      { status: "running" }, // Exclude the current matchId
+    status: "running",
+    $or: [
       {
-        $or: [
-          { "host.userId": req.user._id }, // Condition 1: Host userId matches
-          { "joiner.userId": req.user._id },
-          // Condition 2: Joiner userId matches
-        ],
+        "host.userId": req.user._id,
+        "host.result": { $in: ["win", "loss"] },
+      },
+      {
+        "joiner.userId": req.user._id,
+        "joiner.result": { $in: ["win", "loss"] },
       },
     ],
   }).sort({ createdAt: -1 });

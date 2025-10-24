@@ -490,18 +490,16 @@ export const checkWinningStatus = (room, res, colors) => {
     // //console.log("bwin :" + bluewinner + ", greenlife :" + greenteam.life);
     // //console.log("gwin :" + greenwinner + ", bluelife :" + blueteam.life);
 
-    if (bluewinner > 0 || greenteam.life < 0 || greenteam.exit) {
+    if (bluewinner > 3 || greenteam.life < 0) {
       ob.winnerColor = "blue";
       ob.winnerId = blueteam.userId;
       ob.looserColor = "green";
       ob.looserId = greenteam.userId;
-      ob.reason = "green user exited the game";
-    } else if (greenwinner > 0 || blueteam.life < 0 || blueteam.exit) {
+    } else if (greenwinner > 3 || blueteam.life < 0) {
       ob.winnerColor = "green";
       ob.winnerId = greenteam.userId;
       ob.looserColor = "blue";
       ob.looserId = blueteam.userId;
-      ob.reason = "blue user exited the game";
     } else {
       ob = false;
     }

@@ -33,13 +33,13 @@ class Room {
         players: [
           {
             index: 0,
-            status: 1, //-1 home,1 out of home,2 reached
+            status: -1, //-1 home,1 out of home,2 reached
             currentPos: 0,
             homePosition: { x: 167, y: 1170 }, // Increased by 110
           },
           {
             index: 1,
-            status: 1, //-1 home,1 out of home,2 reached
+            status: -1, //-1 home,1 out of home,2 reached
             currentPos: 0,
             homePosition: { x: 303, y: 1170 }, // Increased by 110
           },
@@ -65,13 +65,13 @@ class Room {
         players: [
           {
             index: 0,
-            status: 1, //-1 home,1 out of home,2 reached
+            status: -1, //-1 home,1 out of home,2 reached
             currentPos: 0,
             homePosition: { x: 780, y: 560 }, // Increased by 110
           },
           {
             index: 1,
-            status: 1, //-1 home,1 out of home,2 reached
+            status: -1, //-1 home,1 out of home,2 reached
             currentPos: 0,
             homePosition: { x: 917, y: 560 }, // Increased by 110
           },

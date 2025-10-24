@@ -71,7 +71,7 @@ const Homepage = () => {
                   key={"k" + index}
                   title={game.title}
                   path={gamemode[game.game]}
-                  banner={"assets/" + game.banner + "?v=1235"}
+                  banner={"assets/" + game.banner + "?v=12356"}
                   status={game.status}
                   full={game.full}
                 />
