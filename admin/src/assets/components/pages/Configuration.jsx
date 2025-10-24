@@ -35,8 +35,8 @@ export const Configuration = () => {
                 key === "FAST2SMS_ROUTE" ||
                 key === "FAST2SMS_SENDER_ID" ||
                 key === "FAST2SMS_MESSAGE" ||
-                key === "SANDBOX_SECRET_KEY" ||
-                key === "SANDBOX_API_KEY" ||
+                // key === "SANDBOX_SECRET_KEY" ||
+                // key === "SANDBOX_API_KEY" ||
                 key === "OTPLESS_CLIENT_ID" ||
                 key === "OTPLESS_SECRET" ||
                 key === "LUDOKING_RAPID_APIKEY" ||
