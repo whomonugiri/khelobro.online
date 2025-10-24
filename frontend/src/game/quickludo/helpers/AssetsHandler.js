@@ -3,7 +3,7 @@ export const AssetsHandler = (scene) => {
   scene.load.image("background", "background.png?v=3");
   scene.load.image("black", "black.png?v=3");
 
-  scene.load.image("board", "ludo_board.png?v=3");
+  scene.load.image("board", "speed_ludo_board.png?v=3");
   scene.load.image("control", "control_panel.png?v=356");
   scene.load.image("control2", "control_panel2.png?v=356");
 

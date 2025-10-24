@@ -440,7 +440,7 @@ export const UIHandler = (scene) => {
     {
       fontSize: "40px", // Font size
       fontStyle: "bold",
-      color: "WHITE", // Text color
+      color: "BLACK", // Text color
       fontFamily: "Arial", // Font family
     }
   );
@@ -452,7 +452,7 @@ export const UIHandler = (scene) => {
     {
       fontSize: "40px", // Font size
       fontStyle: "bold",
-      color: "WHITE", // Text color
+      color: "BLACK", // Text color
       fontFamily: "Arial", // Font family
     }
   );
@@ -499,14 +499,14 @@ export const UIHandler = (scene) => {
     }
   );
 
-  scene.add.image(540, 80, "prize").setScale(0.7);
+  scene.add.image(540, 61, "prize").setScale(0.45);
 
   scene.add.text(
     500, // x position
-    80, // y position
+    50, // y position
     "₹ " + scene.prize, // Text content
     {
-      fontSize: "40px", // Font size
+      fontSize: "35px", // Font size
       fontStyle: "bold",
       color: "white", // Text color
       fontFamily: "Ariel", // Font family
