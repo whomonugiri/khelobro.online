@@ -248,7 +248,7 @@ export const Profile = () => {
 
             <div className="border border-white border-1 my-3 opacity-75"></div>
 
-            {/* <div className="d-flex justify-content-between align-items-center fw-bold text-white">
+            <div className="d-flex justify-content-between align-items-center fw-bold text-white">
               <div className="d-flex align-items-center gap-1">
                 <IoFingerPrint />
                 {t("aadhar_kyc")}
@@ -274,7 +274,7 @@ export const Profile = () => {
                   </button>
                 )}
               </div>
-            </div> */}
+            </div>
           </div>
         </div>
         {/* //popup for KYC */}

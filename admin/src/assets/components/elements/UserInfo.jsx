@@ -136,12 +136,12 @@ export const UserInfo = ({ user, refresh }) => {
               title="WALLET BALANCE"
               amount={"₹ " + user.balance.balance}
             />
-            {/* <WalletButton2
+            <WalletButton2
               icon={<IoFingerPrintSharp />}
               class={user.kyc ? "btn-success" : "btn-secondary"}
               title="KYC STATUS"
               amount={user.kyc ? "KYC Completed" : "KYC Pending"}
-            /> */}
+            />
             <WalletButton2
               icon={<FaRegUserCircle />}
               class={flags.status ? "btn-success" : "btn-danger"}

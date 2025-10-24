@@ -99,7 +99,7 @@ export const OpenUser = () => {
               action={handleMenu}
               text="Quick Matches"
             />
-            {/* <DashButton current={menu} action={handleMenu} text="KYC" /> */}
+            <DashButton current={menu} action={handleMenu} text="KYC" />
             {(_access.includes("ADD TRANSACTION") || _isSuperadmin) && (
               <DashButton
                 current={menu}

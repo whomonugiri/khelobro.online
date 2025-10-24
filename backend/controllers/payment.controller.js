@@ -103,12 +103,12 @@ export const submitWithdrawReq = async (req, res) => {
     let bankAccountNo = req.body.bankAccountNo;
     let bankIfscCode = req.body.bankIfscCode;
 
-    // if (!req.user.kyc) {
-    //   return res.json({
-    //     success: false,
-    //     message: "complete_kyc",
-    //   });
-    // }
+    if (!req.user.kyc) {
+      return res.json({
+        success: false,
+        message: "complete_kyc",
+      });
+    }
 
     if (!validAmount(amount)) {
       return res.json({

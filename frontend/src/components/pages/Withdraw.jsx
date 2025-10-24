@@ -157,14 +157,14 @@ export const Withdraw = () => {
 
   return (
     <>
-      {/* {!kyc && (
+      {!kyc && (
         <Link
           to={"/profile"}
           className="d-block fw-bold text-decoration-none animate__animated animate__pulse animate__infinite bg-primary text-white text-center rounded rounded-4 my-3 p-2"
         >
           {t("complete_kyc_msg")}
         </Link>
-      )} */}
+      )}
 
       <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }}>
         <Card class="p-0">
