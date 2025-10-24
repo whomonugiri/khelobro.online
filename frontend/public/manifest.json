@@ -1,6 +1,6 @@
 {
-  "short_name": "Money Ludo",
-  "name": "Money Ludo",
+  "short_name": "Khelobro",
+  "name": "Khelobro",
   "icons": [
     {
       "src": "assets/applogo.png",
@@ -10,7 +10,7 @@
   ],
   "id": "/?source=pwa",
   "start_url": ".",
-  "description": "Install Money Ludo App On Your Smartphone",
+  "description": "Install Khelobro App On Your Smartphone",
   "background_color": "#201876",
   "display": "standalone",
   "scope": "/",
